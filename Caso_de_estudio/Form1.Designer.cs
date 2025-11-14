@@ -59,6 +59,7 @@
             this.MostrarCon.TabIndex = 2;
             this.MostrarCon.Text = "Mostrar Conexiones";
             this.MostrarCon.UseVisualStyleBackColor = true;
+            this.MostrarCon.Click += new System.EventHandler(this.MostrarCon_Click);
             // 
             // btnBuscar
             // 
@@ -78,6 +79,7 @@
             this.btnContar.TabIndex = 4;
             this.btnContar.Text = "Contar";
             this.btnContar.UseVisualStyleBackColor = true;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
             // 
             // btnAgregar
             // 

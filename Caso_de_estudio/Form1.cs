@@ -47,7 +47,7 @@ namespace Caso_de_estudio
             if (resultado != null)
             {
                 tvArbol.SelectedNode = resultado;
-                resultado.EnsureVisible(); // Hace scroll hasta el nodo
+                resultado.EnsureVisible(); 
                 MessageBox.Show("Elemento encontrado: " + resultado.Text);
             }
             else
@@ -74,6 +74,24 @@ namespace Caso_de_estudio
             return null;
         }
 
+        private void MostrarCon_Click(object sender, EventArgs e)
+        {
+            tvArbol.ExpandAll();
+        }
+
+        private void btnContar_Click(object sender, EventArgs e)
+        {
+            int hijos = ContarHijosSeleccionados();
+
+            MessageBox.Show("El nodo seleccionado tiene " + hijos + " hijos.");
+        }
+        private int ContarHijosSeleccionados()
+        {
+            if (tvArbol.SelectedNode == null)
+                return 0;
+
+            return tvArbol.SelectedNode.Nodes.Count;
+        }
 
     }
 
