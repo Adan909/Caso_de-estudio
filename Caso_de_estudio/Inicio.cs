@@ -21,6 +21,7 @@ namespace Caso_de_estudio
         {
             Tree tree = new Tree();
             tree.Show();
+
         }
 
         private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
