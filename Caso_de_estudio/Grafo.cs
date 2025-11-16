@@ -14,17 +14,17 @@ namespace Caso_de_estudio
         {
             InitializeComponent();
 
-            // Suscribir eventos
+            
             pGrafo.Paint += pGrafo_Paint;
-            btnAgregar.Click += btnAgregar_Click; // Solo un botón
+            btnAgregar.Click += btnAgregar_Click; 
             
 
-            // Tamaño mínimo del panel
+            
             if (pGrafo.Width < 300) pGrafo.Width = 500;
             if (pGrafo.Height < 200) pGrafo.Height = 400;
         }
 
-        // --- Prompt para pedir texto al usuario ---
+        
         public static string Prompt(string text, string caption)
         {
             Form prompt = new Form()
@@ -49,7 +49,7 @@ namespace Caso_de_estudio
             return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : "";
         }
 
-        // --- Botón único: agregar nodo o arista ---
+        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string opcion = Prompt("¿Desea agregar Nodo (N) o Arista (A)?", "Agregar");
@@ -70,7 +70,7 @@ namespace Caso_de_estudio
                     pGrafo.Invalidate();
                 }
             }
-            else if (opcion == "A") // Arista
+            else if (opcion == "A") 
             {
                 string origen = Prompt("Nodo origen:", "Agregar Arista");
                 string destino = Prompt("Nodo destino:", "Agregar Arista");
@@ -91,7 +91,7 @@ namespace Caso_de_estudio
             
         }
 
-        // --- Dibujar grafo ---
+        
         private void pGrafo_Paint(object sender, PaintEventArgs e)
         {
             Graphics gph = e.Graphics;
@@ -102,7 +102,7 @@ namespace Caso_de_estudio
             Font fuente = new Font("Arial", 12);
             int radio = 20;
 
-            // Dibujar aristas sin duplicados
+            
             HashSet<string> dibujadas = new HashSet<string>();
             foreach (var n in g.Ady)
             {
@@ -118,7 +118,7 @@ namespace Caso_de_estudio
                 }
             }
 
-            // Dibujar nodos
+            
             foreach (var n in g.Ady)
             {
                 Point p = g.Pos[n.Key];
