@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Caso_de_estudio
 {
-    public partial class Form1 : Form
+    public partial class Tree : Form
     {
-        public Form1()
+        public Tree()
         {
             InitializeComponent();
         }
