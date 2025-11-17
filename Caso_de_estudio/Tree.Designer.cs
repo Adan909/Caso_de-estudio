@@ -35,6 +35,7 @@
             this.btnContar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.tbElementoBuscado = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tvArbol
@@ -98,11 +99,22 @@
             this.tbElementoBuscado.Size = new System.Drawing.Size(163, 20);
             this.tbElementoBuscado.TabIndex = 6;
             // 
-            // Form1
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(346, 271);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // Tree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.tbElementoBuscado);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnContar);
@@ -110,7 +122,7 @@
             this.Controls.Add(this.MostrarCon);
             this.Controls.Add(this.tbElemento);
             this.Controls.Add(this.tvArbol);
-            this.Name = "Form1";
+            this.Name = "Tree";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -126,6 +138,7 @@
         private System.Windows.Forms.Button btnContar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox tbElementoBuscado;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

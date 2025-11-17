@@ -93,6 +93,10 @@ namespace Caso_de_estudio
             return tvArbol.SelectedNode.Nodes.Count;
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            tvArbol.SelectedNode.Nodes.Remove(tvArbol.SelectedNode);
+        }
     }
 
 }
